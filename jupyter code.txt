@@ -1,0 +1,9 @@
+from numpy import set_printoptions
+from sklearn.preprocessing import MinMaxScaler
+array=data.values
+X=array[:,0:5]
+Y=array[:,4]
+scaler = MinMaxScaler(feature_range=(0,1))
+rescaledX = scaler.fit_transform(X)
+set_printoptions(precision=3)
+print(rescaledX[0:5,:])
